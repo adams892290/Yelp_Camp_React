@@ -1,0 +1,95 @@
+body {
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("https://images.unsplash.com/photo-1559521783-1d1599583485?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80");
+    background-size: cover;
+    background-position: center;
+    text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0 0 5rem rgba(0, 0, 0, 0.5);
+    font-family: 'Cabin', sans-serif;
+}
+
+.lead{
+    color:whitesmoke;
+}
+.cover-container {
+  max-width: 60vw;
+}
+
+.nav-link {
+    padding: 0.25rem 0;
+    font-weight: 700;
+    color: rgba(255,255,255,0.5);
+    margin-left: 1rem;
+    border-bottom: 0.25rem solid transparent;
+}
+
+.nav-link:hover{
+    color: rgba(255,255,255,0.5);
+    border-bottom-color:rgba(255,255,255,0.5);
+}
+
+.nav-link.active {
+    color: white;
+    border-bottom-color:white;
+
+}
+
+.btn-secondary, .btn-secondary:hover{
+    color: #333;
+    text-shadow: none;
+}
+
+.my-card{
+    margin-top: 30px;
+}
+
+.my-card-btn,.my-card-btn-danger,.my-card-btn-success,.my-card-btn-info{
+    background-color: none;  
+    color: whitesmoke; 
+    border-bottom: 0.1rem solid transparent;
+}
+
+.my-card-btn:hover{  
+    border-bottom-color: whitesmoke;
+    color:whitesmoke; 
+}
+
+.my-card-btn-danger:hover{
+    border-bottom-color: whitesmoke;
+    color:red; 
+}
+
+.my-card-btn-success:hover{
+    border-bottom-color: whitesmoke;
+    color:green; 
+}
+
+.my-card-btn-info:hover{
+    border-bottom-color: whitesmoke;
+    color:blueviolet; 
+}
+
+.my-card-quick-image{
+    max-width: 250px;
+    max-height: 200px;
+}
+
+.my-card-body{
+    color:whitesmoke;
+    background: none;
+}
+
+.my-overflow-scroll{
+   overflow-y: scroll;
+}
+
+.my-carasoul-image{
+    max-width: 400px;
+    max-height: 400px;
+}
+
+.my-card-text{
+    font-size: small;
+}
+
