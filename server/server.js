@@ -1,13 +1,11 @@
-if (process.env.NODE_ENV !== "production") {
-    require('dotenv').config();
-}
+
 
 const express = require("express");
 const app = express();
 const cors = require("cors");
 const Campground = require("./models/campground");
 const mongoose = require("mongoose");
-const dbUrl = process.env.DB_URL || "mongodb://localhost:27017/yelpcampreact";
+const dbUrl = process.env.DB_URI || "mongodb://localhost:27017/yelpcampreact";
 const multer = require("multer");
 const storage = multer.memoryStorage();
 const upload = multer({ storage });
@@ -29,8 +27,9 @@ app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
+const PORT = process.env.PORT || 8000;
 
-app.listen("8000", function () {
+app.listen(PORT, function () {
     console.log("The server is up and runnning");
 });
 
@@ -300,3 +299,10 @@ app.get("/verifytoken", async function (req, res) {
         res.status(200).json({ message: "Oops! You are not logged in" });
     }
 });
+
+if (process.env.NODE_ENV === "production") {
+    app.use(express.static("client/build"));
+    app.get("*", function (req, res) {
+        res.sendFile(path.join(__dirname, "client", "build", "index.html"));
+    })
+}
